@@ -27,11 +27,13 @@ hist(flights$gain)
 
 # On average, did flights gain or lose time?
 mean(flights$gain, na.rm = TRUE) # Lost 5 minutes!
+#na.rm removes NA
 
 # Create a data.frame of flights headed to seatac ('SEA'), 
 # and only include the column you just created
 to.sea <- flights %>% select(gain, dest) %>% filter(dest == 'SEA') 
 
+# HELPS ON CHALLENGE
 # On average, did flights to seatac gain or loose time?
 mean(to.sea$gain, na.rm = TRUE) # Lost 11 minutes!
 
